@@ -148,8 +148,6 @@ button:active {
 
 /* The page-specific styling */
 #dancer {
-  position: relative;
-  top: 200px;
   size: 50px;
 }
 
