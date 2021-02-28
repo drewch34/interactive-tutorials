@@ -53,12 +53,23 @@
         <p>
           Bit by Bot is getting dressed for the day, but is a bit worried about the weather. Let's help him prepare!
           <br><br>
-          First, select the conditional (If the weather is ...).
-          <br>
-          Then, select the result of the conditional (... then Bit by Bot will wear...).
-          <br>
-          Lastly, select the result of the else (... or else, Bit by Bot will wear...).
-          <br>
+
+          <form name="form1" id="form1" >
+              First, select the conditional (If the weather is ...): <select name="weather1" id="weather1">
+                <option value="" selected="selected">Select weather</option>
+              </select>
+            <br><br>
+              Then, select the result of the conditional (... then Bit by Bot will wear...): <select name="outfit1" id="outfit1">
+                <option value="" selected="selected">Select outfit</option>
+              </select>
+            <br><br>
+              Lastly, select the result of the else (... or else, Bit by Bot will wear...): <select name="else1" id="else1">
+                <option value="" selected="selected">Select else outfit</option>
+              </select>
+            <br><br>
+            <button id="submit" onclick="return submitBtn()">Submit</button>
+          </form>
+
         </p>
       </div>
       <div class="editor-section flex-item section" style="padding: 1em;">
@@ -74,6 +85,10 @@
 
     </div>
     <div class="showcase-section flex-item section" style="padding: 1em;">
+      <div class="flex-item section">
+        <p>Today the weather is... </p>
+        <p id="randomWeather"></p>
+      </div>
       <div id="dancer">
         <svg class="robot" xmlns="http://www.w3.org/2000/svg" height="400" width="500" viewBox="-100 -50 333 466">
           <defs>
@@ -143,7 +158,12 @@
           <circle cx="129" cy="290" r="5" style="fill:#556B2F;stroke:#006400;stroke-width:2" />
           <circle cx="129" cy="260" r="5" style="fill:#556B2F;stroke:#006400;stroke-width:2" /> -->
 
-          <!-- umbrella: <polyline points="200,250 200,360 215,290 185,290 200,360" style="fill:#20B2AA;stroke:#006400;stroke-width:2" /> -->
+          <!-- closed umbrella: <polyline points="200,250 200,360 215,290 185,290 200,360" style="fill:#20B2AA;stroke:#006400;stroke-width:2" /> -->
+
+          <!-- open umbrella: <path d="m146,246c-99,48 153,-125 153,-125c0,0 7,120 4,133c-3,13 -58,-56 -157,-8z" fill="#20b2aa" id="svg_2" stroke="#006400" stroke-width="2" />
+          <path d="m301,124c-1,0 232,160 142,116c-90,-44 -141,15 -141,15c0,0 -1,-131 -1,-131z" fill="#20b2aa" id="svg_3"
+            stroke="#006400" stroke-width="2" />
+          <line fill="none" id="svg_4" stroke="#006400" stroke-width="2" x1="296" x2="300" y1="253" y2="376" /> -->
 
         </svg>
       </div>
