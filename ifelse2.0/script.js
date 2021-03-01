@@ -38,18 +38,14 @@ window.onload = function() {
     weatherSel.options[weatherSel.options.length] = new Option(x, x);
   }
   weatherSel.onchange = function() {
-    //empty Chapters- and Topics- dropdowns
     outfitSel.length = 1;
     elseOutfitSel.length = 1;
-    //display correct values
     for (var y in conditionsObject[this.value]) {
       outfitSel.options[outfitSel.options.length] = new Option(y, y);
     }
   }
   outfitSel.onchange = function() {
-    //empty Chapters dropdown
     elseOutfitSel.length = 1;
-    //display correct values
     var z = conditionsObject[weatherSel.value][this.value];
     for (var i = 0; i < z.length; i++) {
       elseOutfitSel.options[elseOutfitSel.options.length] = new Option(z[i], z[i]);
